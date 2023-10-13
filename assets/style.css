@@ -1,11 +1,13 @@
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     width: 100%;
     height: 100%;
     background-color: #333;
@@ -14,6 +16,9 @@ body{
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 }
 
 
@@ -24,14 +29,16 @@ body{
 
 
 
-.keyboard{
+.keyboard {
     width: 800px;
     height: 300px;
-    background-color: #2d2d2d;
-    padding: 00px 10px 10px 15px;
+    background-image: linear-gradient(to right, #1a1a1a, black, #1a1a1a);
+    padding: 0px 10px 10px 15px;
     border-radius: 0px 0px 10px 10px;
+    border: 2px solid black;
 }
-.keyboard ul{
+
+.keyboard ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -42,34 +49,50 @@ body{
     height: 100%;
     width: 100%;
 }
-.keyboard ul li{
+
+.keyboard ul li {
     display: flex;
     flex-direction: row;
 }
-.keyboard ul li:nth-of-type(1) div{
+
+.keyboard ul li:nth-of-type(1) div {
     margin: 10px 15px 15px 0px;
-    box-shadow: 0px 0px 10px 0px #00fffb;
+    box-shadow: 5px 0px 10px 0px #00fffb;
     color: #00fffb;
+    animation: shadow-color-one 3s linear alternate infinite;
+    border-color: #00fffb;
 }
-.keyboard ul li:nth-of-type(2) div{
-    box-shadow: 0px 0px 10px 0px #ff6a00;
-    color: #ff6a00;            
+
+.keyboard ul li:nth-of-type(2) div {
+    box-shadow: 0px 0px 15px 0px #ff6a00;
+    color: #ff6a00;
+    animation: shadow-color-two 3s linear alternate infinite;
+    border-color: #ff6a00;
 }
-.keyboard ul li:nth-of-type(3){
+
+.keyboard ul li:nth-of-type(3) {
     margin-left: 20px;
 }
-.keyboard ul li:nth-of-type(3) div{
-    box-shadow: 0px 0px 10px 0px #33ff4e;
+
+.keyboard ul li:nth-of-type(3) div {
+    box-shadow: 0px 0px 15px 0px #33ff4e;
     color: #33ff4e;
+    animation: shadow-color-three 3s linear alternate infinite;
+    border-color: #33ff4e;
 }
-.keyboard ul li:nth-of-type(4){
+
+.keyboard ul li:nth-of-type(4) {
     margin-left: 40px;
 }
-.keyboard ul li:nth-of-type(4) div{
-    box-shadow: 0px 0px 10px 0px #b639ff;
+
+.keyboard ul li:nth-of-type(4) div {
+    box-shadow: 0px 0px 15px 0px #b639ff;
     color: #b639ff;
+    animation: shadow-color-four 3s linear alternate infinite;
+    border-color: #b639ff;
 }
-.keyboard ul li div{
+
+.keyboard ul li div {
     margin: 5px;
     width: 55px;
     height: 55px;
@@ -80,7 +103,7 @@ body{
     font-family: sans-serif;
     border-radius: 5px;
     background-color: #1b1b1bc2;
-    border: 1px solid #4c4c4c;
+    border: 1px solid;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -90,11 +113,14 @@ body{
     color: white;
     transition: transform 0.1;
 }
-.keyboard ul li div:hover{
+
+.keyboard ul li div:hover {
     background-color: #000000;
     border: 1px solid #707070;
+    transform: scale(1.05);
 }
-.keyboard ul li div:active{
+
+.keyboard ul li div:active {
     transform: scale(0.9);
 }
 
@@ -107,13 +133,132 @@ body{
 
 
 
-.game-panel{
+.game-panel {
     width: 800px;
     height: 50%;
     background-color: #222;
     border-radius: 10px 10px 0px 0px;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.game-content{
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+.star-animation{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+.star{
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 
+        0px 0px 10px 1px white,
+        0px -1px 10px 0.1px white,
+        0px -2px 10px 0.1px white,
+        0px -3px 10px 0.1px white,
+        0px -4px 10px 0.1px white,
+        0px -5px 10px 0.1px white,
+        0px -6px 10px 0.1px white,
+        0px -7px 10px 0.1px white,
+        0px -8px 10px 0.1px white,
+        0px -9px 10px 0.1px white,
+        0px -10px 10px 0.1px white,
+        0px -11px 10px 0.1px white,
+        0px -12px 10px 0.1px white,
+        0px -13px 10px 0.1px #fcfcfc,
+        0px -14px 10px 0.1px #fcfcfc,
+        0px -15px 10px 0.1px #fcfcfc,
+        0px -16px 10px 0.1px #fcfcfc,
+        0px -17px 10px 0.1px #fcfcfc,
+        0px -18px 10px 0.1px #fcfcfc,
+        0px -19px 10px 0.1px #fcfcfc,
+        0px -20px 10px 0.1px #fcfcfc,
+        0px -21px 10px 0.1px #fcfcfc,
+        0px -22px 10px 0.1px #e1e1e1,
+        0px -23px 10px 0.1px #e1e1e1,
+        0px -24px 10px 0.1px #e1e1e1,
+        0px -25px 10px 0.1px #e1e1e1,
+        0px -26px 10px 0.1px #e1e1e1,
+        0px -27px 10px 0.1px #e1e1e1,
+        0px -28px 10px 0.1px #e1e1e1,
+        0px -29px 10px 0.1px #878787,
+        0px -30px 10px 0.1px #878787,
+        0px -31px 10px 0.1px #878787,
+        0px -32px 10px 0.1px #878787,
+        0px -33px 10px 0.1px #878787,
+        0px -34px 10px 0.1px #878787,
+        0px -35px 10px 0.1px #878787,
+        0px -36px 10px 0.1px #878787,
+        0px -37px 10px 0.1px #878787,
+        0px -38px 10px 0.1px #878787,
+        0px -39px 10px 0.1px #878787,
+        0px -40px 10px 0.1px #878787,
+        0px -41px 10px 0.1px #878787;
+        
 }
 
 
+
+
+
+
+@keyframes shadow-color-one {
+
+    0% {
+        box-shadow: 0px 0px 15px 0px #00fffb;
+    }
+
+    100% {
+        box-shadow: 0px 0px 15px 0px #000;
+    }
+
+}
+
+@keyframes shadow-color-two {
+
+    0% {
+        box-shadow: 0px 0px 15px 0px #ff6a00;
+    }
+
+    100% {
+        box-shadow: 0px 0px 15px 0px #000;
+    }
+
+}
+
+@keyframes shadow-color-three {
+
+    0% {
+        box-shadow: 0px 0px 15px 0px #33ff4e;
+    }
+
+    100% {
+        box-shadow: 0px 0px 15px 0px #000;
+    }
+
+}
+
+@keyframes shadow-color-four {
+
+    0% {
+        box-shadow: 0px 0px 15px 0px #b639ff;
+    }
+
+    100% {
+        box-shadow: 0px 0px 15px 0px #000;
+    }
+
+}
