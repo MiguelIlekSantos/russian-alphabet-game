@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html {
@@ -108,12 +114,6 @@ figure{
     border-radius: 5px;
     background-color: #1b1b1bc2;
     border: 1px solid;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     color: white;
     transition: transform 0.1;
 }
@@ -145,6 +145,35 @@ figure{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+.start-btn{
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.809);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start-btn p{
+    display: block;
+    color: white;
+    font-family: Verdana;
+    font-size: 2rem;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.1s, color 0.1s, background-color 0.1s, border-color 0.1s;
+}
+.start-btn p:hover{
+    border-color: #acac00;
+    background-color: #acac00;
+    color: black;
+}
+.start-btn p:active{
+    transform: scale(0.9);
 }
 .game-content{
     width: 90%;
@@ -158,11 +187,12 @@ figure{
     overflow: hidden;
 }
 .game-content figure img{
-    width: 80px;
+    height: 90%;
 }
-.alien-ship{
+.alien_ship{
     position: absolute;
     top: -120px;
+    height: 18%;
 }
 .noventa{
     left: 92px;
@@ -184,17 +214,19 @@ figure{
 }
 .bomb{
     position: relative;
+    height: 10.5%;
 }
-.alien-ship img{
-    width: 100px !important;
+.alien_ship img{
+    width: 100% !important;
+    height: 100% !important;
 }
-.alien-ship p{
+.alien_ship p{
     transform: translate(-50%, 80%);
     position: absolute;
     margin: 0px;
     padding: 5px;
     top: 50%;
-    left: 50%;
+    left: 50%; 
     border: 5px solid blue;
     background-color: white;
     display: inline-block;
@@ -211,7 +243,7 @@ figure{
 
 
 .going-down{
-    animation: ship-move 10s linear 1;
+    animation: ship-move 10s linear 1 forwards;
 }
 .going-right{
     animation: bomb-move 2s linear 1;
@@ -230,9 +262,9 @@ figure{
         left: 0px;
     }
     100%{
-        left: 650px;
+        left: 200px;
     }
-
+    
 }
 
 @keyframes ship-move {
@@ -241,7 +273,7 @@ figure{
         top: -120px;
     }
     100%{
-        top: 300px;
+        top: 290px;
     }
 
 }
@@ -293,3 +325,53 @@ figure{
     }
 
 }
+
+@media only screen and (max-height: 800px) {
+
+    @keyframes ship-move {
+    
+        0%{
+            top: -120px;
+        }
+        100%{
+            top: 230px;
+        }
+    
+    }
+
+}
+
+@media only screen and (max-height: 700px) {
+    
+    .alien_ship p{
+        transform: translate(-50%, 30%);
+    }
+
+    @keyframes ship-move {
+    
+        0%{
+            top: -120px;
+        }
+        100%{
+            top: 200px;
+        }
+    
+    }
+
+}
+
+@media only screen and (max-height: 600px) {
+    
+    @keyframes ship-move {
+    
+        0%{
+            top: -120px;
+        }
+        100%{
+            top: 180px;
+        }
+    
+    }
+
+}
+
