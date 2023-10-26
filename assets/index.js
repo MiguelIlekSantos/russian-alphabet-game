@@ -2,7 +2,7 @@ const gameContent = document.getElementById("game-content");
 const startBtn = document.getElementById("start-btn");
 const startBack = document.getElementById("start-back");
 const phonemes = ["a", "be", "ve", "guê", "de", "ié", "io", "gê", "zê", "i", "iê", "ka", "éli", "em", "en", "o", "pê", "ér", "és", "té", "u", "éf", "rá", "tse", "tchê", "chá", "schá", "ъ", "ilê", "ь", "é", "iú", "iá"];
-const phonemesRussian = ["a", "б", "в", "г", "д", "e", "ё", "ж", "3", "и", "й", "к", "л", "м", "н", "o", "п", "p", "с", "t", "у", "ф", "x", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"];
+const phonemesRussian = ["a", "б", "в", "г", "д", "e", "ё", "ж", "3", "и", "й", "к", "л", "м", "н", "o", "п", "p", "с", "T", "у", "ф", "x", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я"];
 const distanceLeft = ["noventa", "cem-noventa", "duz-noventa", "tre-noventa", "qua-noventa", "qui-noventa"]
 
 function num(max) {
@@ -12,7 +12,8 @@ function num(max) {
 function addAlienShip() {
     let alienShipHTML = `<figure id="0" class="noventa alien_ship going-down">
     <img src="assets/imgs/nav alien voando.png">
-    <p id="p">a</p>
+    <p>a</p>
+    <p id="p-refe">a</p>
     </figure>`
 
     for (let a = 1; a < 200; a++) {
@@ -59,30 +60,57 @@ function gameSystem() {
     const alienShipArriving = document.querySelectorAll(".alien_ship");
     const alienShipP = document.querySelectorAll("#p-refe");
     const keyboard = document.getElementById("keyboard");
+    const gameContHei = gameContent.clientHeight;
+    
+    var contador = 0;
 
-    alienShipArriving.forEach((alien_ship, index) => {
-        const intervalIds = setInterval(() => {
-            const alienShipPosition = alien_ship.offsetTop;
-                if(alienShipPosition > -120){
-                    keyboard.addEventListener("click", (event) => {
-                        let letter = event.target.innerHTML 
-
-                        if(letter === alienShipP[index].innerHTML){
-                            console.log("Oi")
-                            bombArray[1].classList.add("going-right-cem")
-                            
-                            clearInterval(intervalIds)
+    keyboard.addEventListener("click", function um(event){
+        if(event.target.tagName === 'DIV'){
+            var letter = event.target.innerHTML 
+            console.log(letter)
+            console.log(alienShipP[contador].innerHTML)
+            console.log(contador)
+            if(letter == alienShipP[contador].innerHTML){
+                alienShipArriving.forEach((alien_ship) => {
+                    const intervalIds = setInterval(() => {
+                        const alienShipPosition = alien_ship.offsetTop;
+                        if(alienShipPosition >= (0.1*gameContHei)){
+                            bombArray[contador].classList.add("going-right-qui")
+    
                         }
-                    })
-
-                }
-
-
-
+                        else if(alienShipPosition >= (0.2*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.3*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.4*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.5*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.6*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.7*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.8*gameContHei)){
+    
+                        }
+                        else if(alienShipPosition >= (0.9*gameContHei)){
+    
+                        }    
             
-        }, 100);
-    });
+                        clearInterval(intervalIds)
+                    }, 100);
+                });
 
+                ++contador;
+            }
+        }
+    })
 
 }
 
@@ -140,5 +168,5 @@ startBtn.addEventListener("click", () => {
     startBack.style.display = "none";
     initiateGame();
     gameSystem();
-    finishGame();
+    // finishGame();    
 })
