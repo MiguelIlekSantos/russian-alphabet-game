@@ -156,6 +156,48 @@ figure{
 
 
 
+/* -------------------TABLE------------------- */
+
+
+
+
+
+.table{
+    list-style-type: none;
+    position: absolute;
+    left: -200px;
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #222;
+    border: 5px solid #111;
+    margin: 0px;
+    padding: 10px;
+    justify-content: center;
+}
+.table div{
+    color: whitesmoke;
+    padding: 5px;
+    font-family: sans-serif;
+}
+.table div li{
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -----------------GAME-PANEL---------------- */
 
@@ -261,8 +303,8 @@ figure{
     font-weight: bold;
 }
 #p-refe{
-    /* display: none; */
-    transform: translate(-50%, 20%);
+    display: none;
+    /* transform: translate(-50%, 20%); */
 }
 
 
@@ -302,7 +344,7 @@ figure{
         left: 0px;
     }
     100%{
-        left: 10px;
+        left: 20px;
     }
     
 }
@@ -312,7 +354,7 @@ figure{
         left: 0px;
     }
     100%{
-        left: 100px;
+        left: 120px;
     }
     
 }
@@ -322,7 +364,7 @@ figure{
         left: 0px;
     }
     100%{
-        left: 200px;
+        left: 220px;
     }
     
 }
@@ -332,7 +374,7 @@ figure{
         left: 0px;
     }
     100%{
-        left: 300px;
+        left: 320px;
     }
     
 }
@@ -342,7 +384,7 @@ figure{
         left: 0px;
     }
     100%{
-        left: 400px;
+        left: 420px;
     }
     
 }
@@ -352,7 +394,7 @@ figure{
         left: 0px;
     }
     100%{
-        left: 500px;
+        left: 520px;
     }
     
 }
