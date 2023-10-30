@@ -31,10 +31,34 @@ figure{
     padding: 0px;
 }
 
+.points-box{
+    position: absolute;
+    z-index: 999;
+    right: -200px;
+    width: 200px;
+    height: 100px;
+    background-color: #222;
+    border: 5px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.points-box p{
+    color: transparent; 
+    background-clip: text; 
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient( yellow, #ffff81);
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+
+
 
 
 
 /* ---------------KEYBOARD---------------- */
+
 
 
 
@@ -132,7 +156,9 @@ figure{
 
 
 
+
 /* -----------------GAME-PANEL---------------- */
+
 
 
 
@@ -235,13 +261,16 @@ figure{
     font-weight: bold;
 }
 #p-refe{
-    display: none;
+    /* display: none; */
+    transform: translate(-50%, 20%);
 }
 
 
 
 
+
 /* ----------------MOVE CLASSES--------------- */
+
 
 
 
