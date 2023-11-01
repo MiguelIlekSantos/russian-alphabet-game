@@ -32,6 +32,7 @@
    <a href="https://github.com/MiguelIlekSantos/russian-alphabet-game/edit/main/README.md#interfaces"> Interfaces</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="https://github.com/MiguelIlekSantos/russian-alphabet-game/edit/main/README.md#stacks"> Stacks</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="https://github.com/MiguelIlekSantos/russian-alphabet-game/edit/main/README.md#future-developing">Future developing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="https://github.com/MiguelIlekSantos/russian-alphabet-game/edit/main/README.md#why--bulb">Why ?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
  
 ***
@@ -51,6 +52,7 @@
    <br>
 </p>
 
+<br>
 
 ## Stacks
 
@@ -69,6 +71,8 @@ src="https://camo.githubusercontent.com/92dc8e4a52f9b517fc80f4c8886065e441fe5140
 <p dir="auto"><a href="https://code.visualstudio.com/" rel="nofollow"><img alt="Vscode" width="50" height="50" src="https://user-images.githubusercontent.com/59892368/223381414-d3066c8b-c3ee-4fae-943d-481857e88000.svg" style="max-width: 100%;"></a>
 <a href="https://git-scm.com/" rel="nofollow"><img alt="Git" width="50" height="50" src="https://github.com/MiguelIlekSantos/russian-alphabet-game/assets/138301252/9652960c-8fb4-42e2-a9b6-c587fe9f7a15" style="max-width: 100%;"></a></p>
 
+<br>
+
 ## Future developing :hammer_and_wrench:
 
 This game is completed, but I am planning to make upgrades in future. This upgrades includes : 
@@ -76,3 +80,12 @@ This game is completed, but I am planning to make upgrades in future. This upgra
 1. Make it responsive for mobile phones :iphone:
 2. Add explosion effects :fire:
 3. Create a second version of this game, where instead of phonemes we need write words
+
+<br>
+
+## Why ? :bulb:
+
+The main inspiration for this game was the game Flippy Bit And The Attack Of The Hexadecimals From Base 16.
+<br>
+Which you can find by this link : [Click here !](https://flippybitandtheattackofthehexadecimalsfrombase16.com)
+
