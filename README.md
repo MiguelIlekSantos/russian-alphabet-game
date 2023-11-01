@@ -12,7 +12,17 @@
    <br>
    <p align="center"> 
       <img  height="200" alt="QR_code_Russian-Alfhabet-Game" title="QR_code_Russian-Alfhabet-Game" src="https://github.com/MiguelIlekSantos/russian-alphabet-game/assets/138301252/402f4ab0-e66f-4c04-807b-d66c3ac20668" />
+      <br>
+      <br>
+   <i>
+      or
+   </i>
+   
+   <p align="center" dir="auto">
+      <a href="https://miguelileksantos.github.io/russian-alphabet-game/">Click to play !<a/>
    </p>
+   </p>
+   
 </p>
 
 ***
