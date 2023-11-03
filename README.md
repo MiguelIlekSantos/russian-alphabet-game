@@ -85,7 +85,7 @@ This game is completed, but I am planning to make upgrades in future. This upgra
 
 ## Why ? :bulb:
 
-The main inspiration for this game was the game Flippy Bit And The Attack Of The Hexadecimals From Base 16.
+The main inspiration for this game was the game _Flippy Bit And The Attack Of The Hexadecimals From Base 16_.
 <br>
 Which you can find by this link : [Click here !](https://flippybitandtheattackofthehexadecimalsfrombase16.com)
 
